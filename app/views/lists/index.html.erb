@@ -1,0 +1,9 @@
+<div class="container mt-4" >
+  <h1>Movie list</h1>
+  <ul class="list-group">
+    <% @lists.each do |list| %>
+    <li class="list-group-item"><%= link_to list.name, list_path(list)%></li>
+    <% end %>
+</ul>
+<%= link_to "new list", new_list_path %>
+</div>
